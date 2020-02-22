@@ -1,0 +1,15 @@
+import numpy as np
+array1=np.array([10,20,30])
+array2=np.array([[10,20,30],[40,50,60],[70,80,90]])
+print(array1)
+print(array1.shape)
+print(array2)
+print(array2.shape)
+array3=np.array([[10,20,30,40,50],[40,50],[70,80,90]])
+print(array3)
+print(array3.shape)
+print(len(array1))
+print(len(array2))
+print(len(array3))
+
+print()

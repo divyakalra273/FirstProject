@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Login Form</title>
+	  <script>
+	  function login()
+	{
+		var uname = document.getElementById("email").value;
+		var pwd = document.getElementById("pwd1").value;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(uname =='')
+		{
+			alert("please enter user name.");
+		}
+		else if(pwd=='')
+		{
+        	alert("enter the password");
+		}
+		else if(!filter.test(uname))
+		{
+			alert("Enter valid email id.");
+		}
+		else if(pwd.length < 6 || pwd.length > 6)
+		{
+			alert("Password min and max length is 6.");
+		}
+		else
+		{
+	alert('Thank You for Login into our Website');
+
+			}
+	}
+	  </script>
+  </head>
+  <style>
+      body
+   {
+     margin:0px; background-color:LightGray; color:Gray; font-family:Arial, Helvetica, sans-serif;
+   }
+   #main
+   {
+     width:600px; height:260px; margin-left:auto; margin-right:auto; border-radius:5px; padding-left:10px; margin-top:100px;
+     border-top:3px double Black; border-bottom:3px double Black; padding-top:20px;
+   }
+   #main table
+   {
+     font-family:"Comic Sans MS", cursive;
+   }
+  /* css code for textbox */
+  #main .tb
+  {
+    height:28px; width:230px; border:1px solid DogerBlue; color:Gray; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;
+  }
+
+   /* css code for button*/
+   #main .btn
+   {
+    width:80px; height:32px; outline:none;  font-weight:bold; border:0px solid #27a465; text-shadow: 0px 0.5px 0.5px #fff;
+    border-radius: 2px; font-weight: 600; color: Gray; letter-spacing: 1px; font-size:14px; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;
+   }
+	.wrapper{
+        width:1170px;
+        margin:auto;
+    }
+    header{
+
+        height:100vh;
+        -webkit-background-size:cover;
+        background-size:cover;
+        background-position:center center;
+        position:relative;
+    }
+
+    .nav-area{
+        float:right:
+        list-style:none;
+        margin-top:50x;
+        background-color: #333;
+        overflow: hidden;
+
+    }
+    .nav-area li{
+        display:inline-block;
+
+    }
+    .nav-area li a{
+
+        text-decoration:none;
+
+        font-family:poppins;
+        font-size:17px;
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+
+
+    }
+    .nav-area li a:hover{
+        background:rgb(152, 138, 135);
+        color:white;
+    }
+    .logo img{
+        width:150px;
+        float:left;
+        height:60px;
+    }
+
+
+
+
+
+
+  </style>
+
+	<body>
+	 <header>
+
+        <div class="wrapper">
+
+            <ul class="nav-area">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/login">LOGIN</a></li>
+                <li><a href="/signIn">SIGN UP</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACT US</a></li>
+            </ul>
+        </div>
+
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	<h2>Welcome To Account Login</h2>
+	</div>
+	<!-- Login box -->
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td>Enter User Name :</td>
+	<td><input type="text" placeholder="Enter user name here" id="email" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Enter Password :</td>
+	<td><input type="password" placeholder="Enter Password here" id="pwd1" class="tb" /></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<input type="submit" value="Reset" class="btn" />
+	<input type="submit" value="Login" class="btn" onClick="login()" /></td>
+	</tr>
+	</table>
+	</div>
+  	 <!-- login box div ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+
+  </body>
+</html>

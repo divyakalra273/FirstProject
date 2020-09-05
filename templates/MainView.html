@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="{{url_for('static',filename='HomePage.css')}}">
+
+</head>
+<style>
+.carousal-item{
+    height:100vh;
+    min-height:300px;
+    background:no-repeat center center scroll;
+   -webkit-background-size:cover;
+    background-size:cover;
+
+}
+.navbar-nav a{
+font-family:poppins;
+font-size:18px;
+text-transform:uppercase;
+font-weight:bold;
+}
+
+.navbar-light .navbar-brand{
+    color:black;
+    font-size:30px;
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:2px;
+
+}
+.page-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 60px 0 30px;
+}
+.footer-copyright {
+  color: #666;
+  padding: 40px 0;
+}
+.features {
+  margin: 4em auto;
+  padding: 1em;
+  position: relative;
+}
+.feature-title {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.features img {
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 16px;
+}
+
+.profile
+{
+    min-height: 355px;
+    display: inline-block;
+    }
+
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #5f9ea0;">
+  <a class="navbar-brand" href="#">Cure</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/chatbot">ChatBot</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/stats">Statstics</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/prediction">Prediction</a>
+
+
+    </ul>
+  </div>
+</nav>
+<br>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="container features">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h3 class="feature-title">Coronary Artery Disease</h3>
+      <img src="{{url_for('static',filename='heart-front-large.jpg')}}" class="img-fluid" style="width:300px;height:300px;">
+      <p>Coronary artery disease is the narrowing or blockage of the coronary arteries, usually caused by atherosclerosis. Atherosclerosis (sometimes called "hardening" or "clogging" of the arteries) is the buildup of cholesterol and fatty deposits (called plaques) on the inner walls of the arteries. </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h3 class="feature-title">Valvular Heart Disease</h3>
+      <img src="{{url_for('static',filename='Heart-valve-illustration_EN_V1.jpg')}}" class="img-fluid"  style="width:300px;height:300px;">
+        <p>The stiffening of heart valves can narrow the size of the valve opening and restrict blood flow. The narrowing is called valve stenosis. It keeps the valve from opening fully and reduces the amount of blood that can flow through. In severe cases, the valve opening can become so narrow that the rest of the body may not receive adequate blood flow.</p>
+
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h3 class="feature-title">Cardiomyopathy</h3>
+      <img src="{{url_for('static',filename='cardio.jpeg')}}" class="img-fluid" style="width:300px;height:300px;">
+        <p>Cardiomyopathy is a progressive disease of the myocardium, or heart muscle. In most cases, the heart muscle weakens and is unable to pump blood to the rest of the body as well as it should. There are many different types of cardiomyopathy caused by a range of factors, from coronary heart disease to certain drugs. </p>   </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+    </div>
+  </div>
+</div>
+
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12">
+        <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+      </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h6 class="text-uppercase font-weight-bold">Contact</h6>
+      <p>1640 Riverside Drive, Hill Valley, California
+      <br/>info@mywebsite.com
+      <br/>+ 01 234 567 88
+      <br/>+ 01 234 567 89</p>
+    </div>
+  </div>
+  </div>
+  <div class="footer-copyright text-center">© 2020 Copyright: MyWebsite.com</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+
+
+</body>
+</html>

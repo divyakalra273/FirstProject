@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="{{url_for('static',filename='HomePage.css')}}">
+
+
+</head>
+<style>
+    .navbar-nav a{
+font-family:poppins;
+font-size:18px;
+text-transform:uppercase;
+font-weight:bold;
+}
+
+.navbar-light .navbar-brand{
+    color:black;
+    font-size:30px;
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:2px;
+
+}
+.page-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 60px 0 30px;
+}
+.footer-copyright {
+  color: #666;
+  padding: 40px 0;
+}
+.features {
+  margin: 4em auto;
+  padding: 1em;
+  position: relative;
+}
+.feature-title {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.features img {
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 16px;
+}
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #5f9ea0;">
+  <a class="navbar-brand" href="#">Cure</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/mainview">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/chatbot">ChatBot</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/stats">Statstics</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/prediction">Prediction</a>
+
+
+    </ul>
+  </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div>
+  <img   class="rounded-circle" style="float:left;width:300px;height:300px;" src={{url_for('static',filename='heart2.jpg')}} alt="image not found">
+
+  <p>Every 40 seconds, somebody experiences a heart attack. In a year, approximately 790,000 Americans suffer this heart disease due to a lot of factors. According to WHO, cardiovascular diseases are the number one cause of death in the world, since more individuals die yearly from this disease as compared to other cause.
+
+    In 2016, around 17.9 million people died from cardiovascular diseases in which 85% are due to stroke and heart attack. That allows a big percentage and very alarming to the world’s population. If you or a loved one has any heart disease, it may be wise to use a heart disease app to track and monitor symptoms that can then be shared with a caregiver. </p>
+</div>
+<h5 class="display-5">What is heart disease? </h5>
+<p class="text-sm-left">Cardiovascular disease, or heart disease as it is more widely known, is a leading killer in the U.S. and across the world. According to statistics from the Centers for Disease Control, one in four Americans dies from heart to disease, which equates to more than 610,000 deaths annually.</p>
+<p class="text-sm-left">As Healthline explained, cardiovascular disease is actually an umbrella term for an array of heart-related problems, such as atherosclerosis, which is a build up on fatty plaque in the arteries, heart infections, congenital defects and coronary artery disease. All the listed conditions can lead to heart attacks or even heart failure, which occur when arteries become blocked, the source noted. </p>
+<p class="text-sm-left">Thankfully, although heart disease is ubiquitous, in many patients it can be treated and managed. Furthermore, given that most heart disease is a corollary of various lifestyle factors, such as lack of exercise and poor diet, heart disease can also be avoided if individuals opt to make healthier choices.</p>
+</div>
+</div>
+<h3 class="display-5">Parameters on which a heart disease is classified. </h3>
+<div class="col-md-offset-6 col-md-12"><p class="text-sm-center"><h6>1. Age:</h6> Age is the most important risk factor in developing cardiovascular or heart diseases, with approximately a tripling of risk with each decade of life. Coronary fatty streaks can begin to form in adolescence. It is estimated that 82 percent of people who die of coronary heart disease are 65 and older. Simultaneously, the risk of stroke doubles every decade after age 55.</p></div>
+
+<p class="text-sm-left"><h6>2. Sex:</h6> Men are at greater risk of heart disease than pre-menopausal women. Once past menopause, it has been argued that a woman’s risk is similar to a man’s although more recent data from the WHO and UN disputes this. If a female has diabetes, she is more likely to develop heart disease than a male with diabetes.</p>
+<p class="text-sm-left"><h6>3. Angina (Chest Pain): </h6> Angina is chest pain or discomfort caused when your heart muscle doesn’t get enough oxygen-rich blood. It may feel like pressure or squeezing in your chest. The discomfort also can occur in your shoulders, arms, neck, jaw, or back. Angina pain may even feel like indigestion.</p>
+<p class="text-sm-left"><h6> 4. Resting Blood Pressure:</h6> Over time, high blood pressure can damage arteries that feed your heart. High blood pressure that occurs with other conditions, such as obesity, high cholesterol or diabetes, increases your risk even more.</p>
+<p class="text-sm-left"><h6>5. Serum Cholesterol:</h6> A high level of low-density lipoprotein (LDL) cholesterol (the “bad” cholesterol) is most likely to narrow arteries. A high level of triglycerides, a type of blood fat related to your diet, also ups your risk of a heart attack. However, a high level of high-density lipoprotein (HDL) cholesterol (the “good” cholesterol) lowers your risk of a heart attack.</p>
+<p class="text-sm-left"><h6>6. Fasting Blood Sugar:</h6> Not producing enough of a hormone secreted by your pancreas (insulin) or not responding to insulin properly causes your body’s blood sugar levels to rise, increasing your risk of a heart attack.</p>
+<p class="text-sm-left"><h6>7. Resting ECG: </h6>For people at low risk of cardiovascular disease, the USPSTF concludes with moderate certainty that the potential harms of screening with resting or exercise ECG equal or exceed the potential benefits. For people at intermediate to high risk, current evidence is insufficient to assess the balance of benefits and harms of screening.</p>
+<p class="text-sm-left"><h6>8. Max heart rate achieved:</h6> The increase in cardiovascular risk, associated with the acceleration of heart rate, was comparable to the increase in risk observed with high blood pressure. It has been shown that an increase in heart rate by 10 beats per minute was associated with an increase in the risk of cardiac death by at least 20%, and this increase in the risk is similar to the one observed with an increase in systolic blood pressure by 10 mm Hg.</p>
+<p class="text-sm-left"><h6>9. Exercise induced angina:</h6> The pain or discomfort associated with angina usually feels tight, gripping or squeezing, and can vary from mild to severe. Angina is usually felt in the center of your chest but may spread to either or both of your shoulders, or your back, neck, jaw or arm. It can even be felt in your hands. o Types of Angina a. Stable Angina / Angina Pectoris b. Unstable Angina c. Variant (Prinzmetal) Angina d. Microvascular Angina.</p>
+<p class="text-sm-left"><h6>10. Peak exercise ST segment: </h6>A treadmill ECG stress test is considered abnormal when there is a horizontal or down-sloping ST-segment depression ≥ 1 mm at 60–80 ms after the J point. Exercise ECGs with up-sloping ST-segment depressions are typically reported as an ‘equivocal’ test. In general, the occurrence of horizontal or down-sloping ST-segment depression at a lower workload (calculated in METs) or heart rate indicates a worse prognosis and higher likelihood of multi-vessel disease. The duration of ST-segment depression is also important, as prolonged recovery after peak stress is consistent with a positive treadmill ECG stress test. Another finding that is highly indicative of significant CAD is the occurrence of ST-segment elevation > 1 mm (often suggesting transmural ischemia); these patients are frequently referred urgently for coronary angiography.</p>
+
+<img src="{{url_for('static',filename='graphimage.jpeg')}}" class="img-fluid" style="float:center;width:300px;height:300px;">
+
+</div>
+
+<br>
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12">
+        <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+      </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h6 class="text-uppercase font-weight-bold">Contact</h6>
+      <p>1640 Riverside Drive, Hill Valley, California
+      <br/>info@mywebsite.com
+      <br/>+ 01 234 567 88
+      <br/>+ 01 234 567 89</p>
+    </div>
+  </div>
+  </div>
+  <div class="footer-copyright text-center">© 2020 Copyright: MyWebsite.com</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+
+
+
+</body>
+</html>

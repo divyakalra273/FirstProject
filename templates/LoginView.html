@@ -3,7 +3,7 @@
   <head>
   <title>Welcome To Login Form</title>
 	  <script>
-	  function login()
+	  function validateLogin()
 	{
 		var uname = document.getElementById("email").value;
 		var pwd = document.getElementById("pwd1").value;
@@ -105,13 +105,7 @@
         float:left;
         height:60px;
     }
-
-
-
-
-
-
-  </style>
+</style>
 
 	<body>
 	 <header>
@@ -133,26 +127,31 @@
 	<h2>Welcome To Account Login</h2>
 	</div>
 	<!-- Login box -->
+
 	<div class="login">
+		<form action="login" method="POST">
 	<table cellspacing="2" align="center" cellpadding="8" border="0">
 	<tr>
 	<td>Enter User Name :</td>
-	<td><input type="text" placeholder="Enter user name here" id="email" class="tb" /></td>
+	<td><input type="text" placeholder="Enter user name here" id="email" name="email" class="tb" /></td>
 	</tr>
 	<tr>
 	<td>Enter Password :</td>
-	<td><input type="password" placeholder="Enter Password here" id="pwd1" class="tb" /></td>
+	<td><input type="password" placeholder="Enter Password here" id="pwd1" name="pwd1" class="tb" /></td>
 	</tr>
 	<tr>
 	<td></td>
 	<td>
 	<input type="submit" value="Reset" class="btn" />
-	<input type="submit" value="Login" class="btn" onClick="login()" /></td>
+	<input type="submit" value="Login" class="btn" name="Login" onClick= "validateLogin()" /></td>
 	</tr>
 	</table>
+		</form>
 	</div>
+
   	 <!-- login box div ending here.. -->
 	</div>
+
 	<!-- Main div ending here... -->
 
   </body>

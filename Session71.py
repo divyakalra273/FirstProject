@@ -4,37 +4,33 @@ from nltk.chat.util import Chat, reflections
 # reflections is a dictionary of key and value pairs, For a key as input we have an outcome as value
 # print(reflections)
 # print(reflections['i was'])
+def chat(message):
+    conversation = [
+        [
+            "Hi",
+            ["Hey, What can i do for you ?", ]
+        ],
 
-conversation = [
-    [
-        "Hi",
-        ["Hey, What can i do for you ?", ]
-    ],
+        [
+            "What is Your Name ?",
+            ["My Name is John. Good to Talk to You !! What is your Name ?", ]
+        ],
 
-    [
-        "What is Your Name ?",
-        ["My Name is John. Good to Talk to You !! What is your Name ?", ]
-    ],
+        [
+            r"my name is (.*)",
+            ["Hello %1, Its good to chat with You !! What programming languages you know?", ]
+        ],
 
-    [
-        r"my name is (.*)",
-        ["Hello %1, Its good to chat with You !! What programming languages you know?", ]
-    ],
+        [
+            r"i know (.*)",
+            ["OK!! So you can code in %1", "this is great that you know %1"]
+        ],
 
-    [
-        r"i know (.*)",
-        ["OK!! So you can code in %1", "this is great that you know %1"]
-    ],
+    ]
 
-]
 
-# print(conversation)
-# print(reflections)
 
-def main():
-    print("This is John. How can i Help You ? You can anytime press quit to finish the Chat")
-    chatBot = Chat(conversation, reflections)
-    chatBot.converse()
+    if message==conversation:
+        chatBot = Chat(conversation, reflections)
+    return chatBot.converse()
 
-if __name__ == '__main__':
-    main()

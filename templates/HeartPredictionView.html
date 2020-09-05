@@ -3,72 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <title>Know Your Heart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="{{url_for('static',filename='HomePage.css')}}">
 </head>
 <style>
-    .wrapper{
-        width:1170px;
-        margin:auto;
-    }
-    header{
+.carousal-item{
+    height:100vh;
+    min-height:300px;
+    background:no-repeat center center scroll;
+   -webkit-background-size:cover;
+    background-size:cover;
 
-        height:100vh;
-        -webkit-background-size:cover;
-        background-size:cover;
-        background-position:center center;
-        position:relative;
-    }
+}
 
-    .nav-area{
-        float:right:
-        list-style:none;
-        margin-top:50x;
-        background-color: #333;
-        overflow: hidden;
+    .navbar-nav a{
+font-family:poppins;
+font-size:18px;
+text-transform:uppercase;
+font-weight:bold;
+}
 
-    }
-    .nav-area li{
-        display:inline-block;
+    .navbar-light .navbar-brand{
+    color:black;
+    font-size:30px;
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:2px;
 
-    }
-    .nav-area li a{
-
-        text-decoration:none;
-
-        font-family:poppins;
-        font-size:17px;
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-
-
-    }
-    .nav-area li a:hover{
-        background:rgb(152, 138, 135);
-        color:white;
-    }
-    .logo img{
-        width:150px;
-        float:left;
-        height:60px;
-    }
-
+}
+.page-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 60px 0 30px;
+}
+.footer-copyright {
+  color: #666;
+  padding: 40px 0;
+}
+.features {
+  margin: 4em auto;
+  padding: 1em;
+  position: relative;
+}
+.feature-title {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.features img {
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 16px;
+}
 </style>
 <body>
-    <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #5f9ea0;">
+  <a class="navbar-brand" href="#">Cure</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-        <div class="wrapper">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/mainview">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/chatbot">ChatBot</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/stats">Statstics</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/prediction">Prediction</a>
 
-            <ul class="nav-area">
-                <li><a href="/">HOME</a></li>
-                <li><a href="/login">LOGIN</a></li>
-                <li><a href="/signIn">SIGN UP</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">CONTACT US</a></li>
-            </ul>
+
+    </ul>
+  </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h5 class="display-5">Analyse Your Reports here. </h5>
+
+    <div class="container-fluid">
+        <div class="col-lg-12">
+                <form action="{{ url_for('prediction') }}" method="post">
+                    <br>
+                    <br>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="age">Enter your age</label>
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <input type="text" class="form-control" id="age" name="age" placeholder="Your current age in years">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="sex">Enter your Gender</label>
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <select class="form-control" id="sex" name="sex">
+                                    <option value="1">Male</option>
+                                    <option value="0">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="trestbps">Resting blood pressure (in mm Hg on admission to the hospital) </label>
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <input type="text" class="form-control" id="trestbps" name="trestbps" placeholder="Your Blood Pressure">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="chol">Serum Cholestrol in mg/dl </label>
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <input type="text" class="form-control" id="chol" name="chol" placeholder="Cholestrol">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="fbs">Fasting blood sugar>120mg/dl</label>
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <select class="form-control" id="fbs" name="fbs">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="restecg">Rest ECG results</label>
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <select class="form-control" id="restecg" name="restecg">
+                                    <option value="0">Normal</option>
+                                    <option value="1">Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV) </option>
+                                    <option value="2">Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="thalach">Maximum heart rate achieved during ecg</label>
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <input type="text" class="form-control" id="thatach" name="thalach" placeholder="Max heart rate">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="exang">Chest pain during exercise?</label>
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <select class="form-control" id="exang" name="exang">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                                <label for="cp">Chest pain type?</label>
+                            </div>
+                            <div class="col-lg-8 col-md-8">
+                                <select class="form-control" id="cp" name="cp">
+                                    <option value="0">No chest pain</option>
+                                    <option value="1">Typical angina(Chest pain due to emotional or physical stress</option>
+                                    <option value="2">Atypical angina(Discomfort in chest, no severe</option>
+                                    <option value="3">Non-anginal chest pain(Near sternum, oppressive or pressure like(Discomfort in chest, no severe</option>
+                                    <option value="4">Asymptomatic chest pain(Select if the above are not applicable)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <center>
+                            <button type="submit" class="btn btn-dark" value="submit">Submit</button>
+                        </center>
+                        </div>
+                </form>
+
+            </div>
         </div>
-    </header>
 
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12">
+        <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+      </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h6 class="text-uppercase font-weight-bold">Contact</h6>
+      <p>1640 Riverside Drive, Hill Valley, California
+      <br/>cure@mywebsite.com
+      <br/>+ 91 9888045670
+      <br/>+ 91 9872528567</p>
+    </div>
+  </div>
+  </div>
+  <div class="footer-copyright text-center">© 2020 Copyright: MyWebsite.com</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
 
 
 </body>

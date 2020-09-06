@@ -33,7 +33,7 @@ for i, var in enumerate(cats):
     ax = fig.add_subplot(2, 2, i)
     ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
     sns.countplot(data = X_train, x = var, hue = 'target', ax = ax)
-plt.savefig('static\graphimage.jpeg')
+plt.savefig('static\graphimage.jpeg',bbox_inches='tight')
 plt.show()
 
 
@@ -54,5 +54,5 @@ for i, var in enumerate(bins):
     i = i + 1
     ax = fig.add_subplot(2, 3, i)
     sns.countplot(data = X_train, x = var, hue = 'target', ax = ax)
-plt.savefig('static\graphimage2.jpeg')
+plt.savefig('static\graphimage2.jpeg',bbox_inches='tight')
 plt.show()

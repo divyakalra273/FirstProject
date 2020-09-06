@@ -232,7 +232,7 @@ def statstics():
             ax = fig.add_subplot(2, 2, i)
             ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
             sns.countplot(data=X_train, x=var, hue='target', ax=ax)
-        plt.savefig('static\graphimage.jpeg')
+        plt.savefig('static\graphimage.jpeg',bbox_inches='tight')
         plt.show()
 
         df.restecg = df.restecg.replace({'Normal': 0, 'LV hyper': 1, 'ST-T wave': 1})
@@ -252,7 +252,7 @@ def statstics():
             i = i + 1
             ax = fig.add_subplot(2, 3, i)
             sns.countplot(data=X_train, x=var, hue='target', ax=ax)
-        plt.savefig('static\graphimage2.jpeg')
+        plt.savefig('static\graphimage2.png',bbox_inches='tight')
         plt.show()
 
     return render_template("Stats.html")
@@ -268,7 +268,7 @@ def generateGraph():
     plt.title("Risk factor according to gender")
 
     plt.show()
-    plt.savefig('static\graphimage.jpg',bbox_inches='tight')
+    plt.savefig('static\graphimage.png',bbox_inches='tight')
 
 
 
